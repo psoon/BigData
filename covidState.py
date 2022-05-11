@@ -51,7 +51,7 @@ def getCovidStatsService(startCreateDt, endCreateDt):
     df = pd.DataFrame(js)
     df = df.sort_values(['seq'], ascending=True)
     return df
-
+#ㅁㄴㅇㄹ
 #[CODE 0]
 def main():
     print("<<코로나 감염 현황 데이터를 수집합니다.>>")
