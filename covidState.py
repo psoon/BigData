@@ -41,17 +41,13 @@ def getCovidStatsItem(startCreateDt, endCreateDt):
 #[CODE 3]
 def getCovidStatsService(startCreateDt, endCreateDt):
 
-    # jsonData = getCovidStatsItem(page_no, num_of_rows, startCreateDt, endCreateDt) #[CODE 2]
-
-    # print (json.dumps(jsonData, indent=4,sort_keys=True, ensure_ascii=False))
-
     jsonData = getCovidStatsItem(startCreateDt, endCreateDt) #[CODE 2]
 
     js = jsonData['response']['body']['items']['item']
     df = pd.DataFrame(js)
     df = df.sort_values(['seq'], ascending=True)
     return df
-#ㅁㄴㅇㄹ
+
 #[CODE 0]
 def main():
     print("<<코로나 감염 현황 데이터를 수집합니다.>>")
